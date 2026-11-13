@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beleza Natural do Paraná - Cataratas do Iguaçu</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: lightblue;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: lightgray;
+            padding: 15px;
+        }
+
+        main {
+            background-color: white;
+            padding: 20px;
+            min-height: 200px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header id="cabecalho">
+        <h1>Meu Site</h1>
+    </header>
+
+    <nav id="menu">
+        <a href="#">Início</a>
+        <a href="#">Sobre</a>
+        <a href="#">Contato</a>
+    </nav>
+
+    <main id="conteudo">
+       
+    </main>
+
+    <script>
+       
+        const body = document.body;
+        const header = document.getElementById("cabecalho");
+        const nav = document.getElementById("menu");
+        const main = document.getElementById("conteudo");
+
+       
+        body.style.backgroundColor = "#e8f5e9";
+        nav.style.backgroundColor = "#81c784"; 
+        main.style.backgroundColor = "#ffffff"; 
+
+      
+        body.style.display = "flex";
+        body.style.flexDirection = "column";
+        
+        header.style.textAlign = "center";
+        header.style.color = "#ffffff";
+
+        nav.style.textAlign = "center";
+        
+       
+        const links = nav.getElementsByTagName("a");
+        for (let i = 0; i < links.length; i++) {
+            links[i].style.color = "#004d40";
+            links[i].style.fontWeight = "bold";
+            links[i].style.margin = "0 15px";
+            links[i].style.textDecoration = "none";
+        }
+
+       
+        main.style.maxWidth = "800px";
+        main.style.margin = "20px auto";
+        main.style.borderRadius = "8px";
+        main.style.boxShadow = "0px 4px 10px rgba(0,0,0,0.1)";
+        main.style.textAlign = "center";
+
+
+        header.querySelector("h1").textContent = "Beleza Natural do Paraná";
+
+       
+        
+        
+        const tituloPrincipal = document.createElement("h1");
+        tituloPrincipal.textContent = "Cataratas do Iguaçu";
+        tituloPrincipal.style.color = "#1b5e20";
+        main.appendChild(tituloPrincipal);
+
+  
+        const imagem = document.createElement("img");
+        imagem.setAttribute("src", "https://grupocataratas.com/wp-content/uploads/2020/07/FOTOS_PN_CATARATAS_00007-scaled.jpg");
+        imagem.setAttribute("alt", "Visão panorâmica das Cataratas do Iguaçu com arco-íris");
+        imagem.style.width = "100%";
+        imagem.style.maxHeight = "400px";
+        imagem.style.objectFit = "cover";
+        imagem.style.borderRadius = "6px";
+        imagem.style.margin = "15px 0";
+        main.appendChild(imagem);
+
+  
+        const paragrafo1 = document.createElement("p");
+        paragrafo1.textContent = "Localizadas em Foz do Iguaçu, as Cataratas do Iguaçu são uma das maiores e mais impressionantes quedas d'água do mundo. Situadas na fronteira entre o Brasil e a Argentina, o local abriga cerca de 275 quedas isoladas que se transformam em uma única frente durante as cheias.";
+        paragrafo1.style.lineHeight = "1.6";
+        paragrafo1.style.color = "#333333";
+        paragrafo1.style.fontSize = "16px";
+        main.appendChild(paragrafo1);
+
+  
+        const paragrafo2 = document.createElement("p");
+        paragrafo2.textContent = "O Parque Nacional do Iguaçu protege uma rica biodiversidade da Mata Atlântica e oferece passarelas que permitem aos visitantes chegar incrivelmente perto da Garganta do Diabo, a queda mais imponente do complexo.";
+        paragrafo2.style.lineHeight = "1.6";
+        paragrafo2.style.color = "#333333";
+        paragrafo2.style.fontSize = "16px";
+        main.appendChild(paragrafo2);
+
+    </script>
+
+</body>
+</html>
